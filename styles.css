@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    place-items: center;
+    margin-top: 100px;
+    background-color: rgb(248, 244, 235);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+.h1{
+    font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+#firstText{
+    font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.label-contanier{
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+
+}
+.labein{
+    width: 220px;
+    height: 20px;
+}
+.labein:hover{
+    outline: pink;
+}
+.labein:focus{
+    outline: pink;
+}
+#myButton{
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: plum;
+}
+#wrapPer{
+    display: none;
+}
+#wrapPer button{
+    width: 160px;
+    height: 45px;
+    border: 2px;
+    border-radius: 10px;
+    background-color: pink;
+}
+#wrapPer button:hover{
+    background-color: palevioletred;
+}
+#wrapPer button a{
+    color: black;
+    text-decoration: none;
+}
