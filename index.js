@@ -1,6 +1,55 @@
 let countdownInterval;
 
 function startCountdown() {
+  clearInterval(countdownInterval);
+  const input = document.getElementById("birthdayInput").value;
+  const countdownDisplay = document.getElementById("countdown");
+  const message = document.getElementById("message");
+
+  if (!input) {
+    alert("Please enter your birthday date.");
+    return;
+  }
+
+  const now = new Date();
+  let birthday = new Date(input);
+
+  // Set birthday to this year or next year
+  birthday.setFullYear(now.getMonth() > birthday.getMonth() || 
+    (now.getMonth() === birthday.getMonth() && now.getDate() >= birthday.getDate())
+    ? now.getFullYear() + 1 : now.getFullYear());
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = birthday.getTime() - now;
+
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      countdownDisplay.textContent = '';
+      message.textContent = "🎂 Happy Birthday!";
+      document.body.classList.add('bg-yellow-100');
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / 1000 / 60) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    countdownDisplay.textContent = 
+      `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  updateCountdown(); // initial call
+  countdownInterval = setInterval(updateCountdown, 1000);
+}
+
+
+
+/*
+let countdownInterval;
+
+function startCountdown() {
   const inputValue = document.getElementById("birthdayInput").value;
   if (!inputValue) {
     alert("Please select your birthday date and time.");
@@ -39,33 +88,14 @@ function startCountdown() {
       `${days}d ${hours}h ${minutes}m ${seconds}s until your birthday!`;
   }, 1000);
 }
-/*
-function showBirthdayMessage() {
-  const messages = [
-    "🎉 Happy Birthday! Have an amazing day!",
-    "🎂 Wishing you lots of cake and joy!",
-    "🎈 It's your special day! Celebrate big!",
-    "🌟 You’re a year more awesome!",
-    "🎁 Surprise! Happy Birthday!"
-  ];
 
-  const msg = messages[Math.floor(Math.random() * messages.length)];
-  document.getElementById("countdown").textContent = "";
-  document.getElementById("message").textContent = msg;
-
-  const shareBtn = document.getElementById("shareBtn");
-  if (navigator.share) {
-    shareBtn.style.display = "inline-block";
-  }
-}
-*/
 function showBirthdayMessage() {
     const messages = [
-      "🎉 Happy Birthday! Have an amazing day!",
+      "🎉  Happy Birthday! Have an amazing day!",
       "🎂 Wishing you lots of cake and joy!",
-      "🎈 It's your special day! Celebrate big!",
+      "🎈  It's your special day! Celebrate big!",
       "🌟 You’re a year more awesome!",
-      "🎁 Surprise! Happy Birthday!"
+      "🎁  Surprise! Happy Birthday!"
     ];
 
     const msg = messages[Math.floor(Math.random() * messages.length)];
@@ -86,7 +116,7 @@ function share() {
     url: 'https://neducod.github.io/birthday-countdown/'
   }).catch(err => console.error("Share failed:", err));
 }
-
+*/
 
 
 /*
