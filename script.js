@@ -27,15 +27,3 @@ window.onload = function(){
         audio.style.display = 'none';
     })
 }
-/*
-//POP UP CODE
-window.onload = function () {
-    const popup = document.getElementById('popup');
-    popup.style.display = 'flex';
-
-    // Hide after 5 seconds (5000 milliseconds)
-    setTimeout(() => {
-      popup.style.display = 'none';
-    }, 5000);
-  };
-*/
