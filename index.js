@@ -1,52 +1,6 @@
-let countdownInterval;
-
-function startCountdown() {
-  clearInterval(countdownInterval);
-  const input = document.getElementById("birthdayInput").value;
-  const countdownDisplay = document.getElementById("countdown");
-  const message = document.getElementById("message");
-
-  if (!input) {
-    alert("Please enter your birthday date.");
-    return;
-  }
-
-  const now = new Date();
-  let birthday = new Date(input);
-
-  // Set birthday to this year or next year
-  birthday.setFullYear(now.getMonth() > birthday.getMonth() || 
-    (now.getMonth() === birthday.getMonth() && now.getDate() >= birthday.getDate())
-    ? now.getFullYear() + 1 : now.getFullYear());
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = birthday.getTime() - now;
-
-    if (distance < 0) {
-      clearInterval(countdownInterval);
-      countdownDisplay.textContent = '';
-      message.textContent = "🎂 Happy Birthday!";
-      document.body.classList.add('bg-yellow-100');
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / 1000 / 60) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
-
-    countdownDisplay.textContent = 
-      `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  updateCountdown(); // initial call
-  countdownInterval = setInterval(updateCountdown, 1000);
-}
 
 
 
-/*
 let countdownInterval;
 
 function startCountdown() {
@@ -116,7 +70,6 @@ function share() {
     url: 'https://neducod.github.io/birthday-countdown/'
   }).catch(err => console.error("Share failed:", err));
 }
-*/
 
 
 /*
