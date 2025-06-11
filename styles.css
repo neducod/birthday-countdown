@@ -12,24 +12,18 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 15px;
     --background: linear-gradient(to right, #74ebd5 0%, #acb6e5 100%); 
-    /* width: 490px;
-    min-width: 200px;*/
     height: 254px;
-
-
     width: 100%;
     max-width: 490px;
     box-sizing: border-box;
-    min-width: 200px;
-
     padding: 5px;
     border-radius: 1rem;
     overflow: visible;
     background: #74ebd5;
     background: var(--background);
-    position: relative;
     z-index: 1;
 }
 .container::before {
@@ -138,10 +132,18 @@ body{
     background-color: pink;  
 }
 
-/*
+
 @media screen and (max-width: 480px) {
     body {
-      background-color: lightgreen;
+      background-color: rgb(189, 215, 189);
     }
-  }
-*/
+    .container{
+        height: auto;
+    }
+    .h1{
+        font-size: 24px;
+    }
+    h1{
+        font-size: 24px;
+    }
+}
