@@ -5,7 +5,7 @@
 body{
     place-items: center;
     margin-top: 100px;
-    background-color: rgb(248, 244, 235);
+    background-color: rgb(244, 230, 196);
 }
 .container{
     display: flex;
@@ -13,12 +13,17 @@ body{
     justify-content: center;
     align-items: center;
     gap: 15px;
-
-
-
     --background: linear-gradient(to right, #74ebd5 0%, #acb6e5 100%); 
-    width: 490px;
+    /* width: 490px;
+    min-width: 200px;*/
     height: 254px;
+
+
+    width: 100%;
+    max-width: 490px;
+    box-sizing: border-box;
+    min-width: 200px;
+
     padding: 5px;
     border-radius: 1rem;
     overflow: visible;
@@ -115,9 +120,6 @@ body{
     color: black;
     text-decoration: none;
 }
-
-
-
 .btn{
     width: 160px;
     height: 45px;
@@ -135,3 +137,11 @@ body{
     border-radius: 10px;
     background-color: pink;  
 }
+
+/*
+@media screen and (max-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+*/
