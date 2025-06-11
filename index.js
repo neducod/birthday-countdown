@@ -83,7 +83,7 @@ function share() {
   navigator.share({
     title: 'Happy Birthday!',
     text: '🎉 It’s my birthday today! Join me in celebrating! 🎂',
-    url: window.location.href
+    url: 'https://neducod.github.io/birthday-countdown/'
   }).catch(err => console.error("Share failed:", err));
 }
 
