@@ -6,10 +6,6 @@ document.getElementById("myButton").onclick = function(){
 }
 
 document.getElementById("myButton").addEventListener("click", function(){
-    document.getElementById("wrapPer").style.display = "block";
-})
-
-document.getElementById("myButton").addEventListener("click", function(){
     const name = document.getElementById("myText").value.trim();
 
     if(name == ""){
@@ -17,5 +13,9 @@ document.getElementById("myButton").addEventListener("click", function(){
     }
     else{
 
+        document.getElementById("myButton").addEventListener("click", function(){
+            document.getElementById("wrapPer").style.display = "block";
+        })
+        
     }
 })
