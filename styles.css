@@ -124,3 +124,13 @@ body{
     background-color: pink;
     display: none;
 }
+.btn{
+    width: 160px;
+    height: 45px;
+    border: 2px;
+    border-radius: 10px;
+    background-color: pink;  
+}
+.btn:hover{
+    background-color: #f6d365;
+}

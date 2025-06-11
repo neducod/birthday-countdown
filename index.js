@@ -39,7 +39,7 @@ function startCountdown() {
       `${days}d ${hours}h ${minutes}m ${seconds}s until your birthday!`;
   }, 1000);
 }
-
+/*
 function showBirthdayMessage() {
   const messages = [
     "🎉 Happy Birthday! Have an amazing day!",
@@ -58,6 +58,26 @@ function showBirthdayMessage() {
     shareBtn.style.display = "inline-block";
   }
 }
+*/
+function showBirthdayMessage() {
+    const messages = [
+      "🎉 Happy Birthday! Have an amazing day!",
+      "🎂 Wishing you lots of cake and joy!",
+      "🎈 It's your special day! Celebrate big!",
+      "🌟 You’re a year more awesome!",
+      "🎁 Surprise! Happy Birthday!"
+    ];
+
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("countdown").textContent = "";
+    document.getElementById("message").textContent = msg;
+
+    const shareBtn = document.getElementById("shareBtn");
+    if (navigator.share) {
+      shareBtn.style.display = "inline-block";
+    }
+}
+
 
 function share() {
   navigator.share({

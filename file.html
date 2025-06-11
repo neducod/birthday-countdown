@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>🎉 Birthday Countdown 🎉</h1>
+    <div class="container">
+        <h1>🎉 Birthday Countdown 🎉</h1>
 
-    <input type="datetime-local" id="birthdayInput">
-    <button onclick="startCountdown()">Start Countdown</button>
-
-
-    <div id="countdown"></div>
-    <div id="message"></div>
-
-    <button id="shareBtn" onclick="share()">Share</button>
+        <input type="datetime-local" id="birthdayInput">
+        <button onclick="startCountdown()" class="btn">Start Countdown</button>
+    
+    
+        <div id="countdown"></div>
+        <div id="message"></div>
+    
+        <button id="shareBtn" onclick="share()" class="btn">Share</button>
+    </div>
 </body>
 <script src="./index.js"></script>
 </html>
