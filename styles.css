@@ -118,12 +118,6 @@ body{
 
 
 
-#message{
-    width: 200px;
-    height: 100px;
-    background-color: pink;
-    display: none;
-}
 .btn{
     width: 160px;
     height: 45px;
@@ -133,4 +127,11 @@ body{
 }
 .btn:hover{
     background-color: #f6d365;
+}
+.btnn{
+    width: 160px;
+    height: 25px;
+    border: 2px;
+    border-radius: 10px;
+    background-color: pink;  
 }
