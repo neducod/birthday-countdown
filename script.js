@@ -20,5 +20,24 @@ document.getElementById("myButton").addEventListener("click", function(){
 })
 
 */
+let userName;
+
+const myText = document.getElementById("myText");
+// const myButton = document.getElementById("myButton");
+const secondDiv = document.getElementById("secondDiv");
+const firstText = document.getElementById("firstText");
+const birthdayInput = document.getElementById("birthdayInput");
+const startCountdown = document.getElementById("startCountdown");
+const countdownSection = document.getElementById("countdownSection");
+const countdownText = document.getElementById("countdownText");
 
 
+
+document.getElementById("myButton").addEventListener("click", () => {
+    const userName = nameInput.value.trim();
+    if(userName){
+        greeting.textContent = `Hi ${userName}!`;
+        document.getElementById("first-div").style.display = "none";
+        document.getElementById("secondDiv").style.display = "block";
+    }
+});

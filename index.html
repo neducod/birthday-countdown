@@ -20,23 +20,30 @@
 </head>
 <body>
     <div class="container">
-        <audio src="./audio/audio.mp3" controls autoplay loop id="audio">
-            <source src="my-song.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
         <h1 class="h1">𐙚⋆°｡⋆♡Birthday Countdown ⋆｡˚ ᡣ𐭩</h1>
-        <p id="firstText"></p>
         <div class="container-info">
-            <div class="label-contanier" id="label-contanier">
-                <label for="userName" class="labeinn" >What is your name?</label> 
-                <input type="text" name="name" id="myText" placeholder="Enter your name"  class="labein" > 
-                <button id="myButton" onclick="myButton()">Submit</button>
+            <div class="label-contanier">
+                <div class="first-div" id="first-div">
+                    <label for="userName" class="labeinn" >What is your name?</label> 
+                    <input type="text" name="name" id="myText" placeholder="Enter your name"  class="labein"> 
+                    <button id="myButton">Submit</button>
+                </div>
+                <div id="secondDiv">
+                    <p id="firstText"></p>
+                    <label for="date">When were you born?</label>
+                    <input type="datetime-local" id="birthdayInput">
+                    <button id="startCountdown">Start Countdown</button>
+                </div>
+                <div id="countdownSection">
+                    <h2 id="countdownText"></h2>
+                </div>
             </div>
+
+              <!--
             <div id="wrapPer">
-                <a href="https://www.google.com/"><button>No,I hate my birthday💢</button></a>
+              <a href="https://www.google.com/"><button>No,I hate my birthday💢</button></a>
                 <button><a href="./file.html">Yes! I do🧁𐙚</a></button>
-            </div>
-            <p id="welcomeText"></p>
+            </div>-->
         </div>
     </div>
 </body>
