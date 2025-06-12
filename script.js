@@ -1,3 +1,4 @@
+/*
 let userName;
 
 document.getElementById("myButton").addEventListener("click", function(){
@@ -18,6 +19,33 @@ document.getElementById("myButton").addEventListener("click", function(){
         }
     }
 })
+*/
+
+//Code to make container disappear
+let labelContanier;
+
+function myButton(){
+    const name = document.getElementById("myText").value;
+    if (name.trim() !== ""){
+        document.getElementById("label-contanier").classList.add("hidden");
+        document.getElementById("wraPer").classList.add("hidden");
+        document.getElementById("welcomeText").textContent = `Hello, ${name}!`;
+    }
+    else{
+        alert("Please enter your name.");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 window.onload = function(){
     const audio = document.getElementById('audio');
