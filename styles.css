@@ -140,6 +140,10 @@ body{
 #secondDiv{
     display: none;
 }
+.secondDiv{
+    display: flex;
+    flex-direction: row;
+}
 @media screen and (max-width: 480px) {
     body {
       background-color: rgb(189, 215, 189);

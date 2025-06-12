@@ -40,15 +40,15 @@ document.getElementById("myButton").addEventListener("click",() => {
 });
 
 document.getElementById("startCountdown").addEventListener("click", () => {
-    const birthdayInput = birthdayInput.value;
-    if (birthdayInput === "") return;
+    const birthdayValue = birthdayInput.value;
+    if (birthdayValue === "") return;
 
-    const birthday = new Date(birthdayInput);
+    const birthday = new Date(birthdayValue);
     const now = new Date(); 
 
     //This code is for when the birthday is not in thsi year
-    if(birthdayInput < now){
-        birthdayInput.setFullYear(now.getFullYear() + 1);
+    if(birthday < now){
+        birthday.setFullYear(now.getFullYear() + 1);
     }
 
     document.getElementById("secondDiv").style.display = "none";
@@ -56,10 +56,11 @@ document.getElementById("startCountdown").addEventListener("click", () => {
 
     function updateCountdown(){
         const now = new Date();
-        const diff = birthdayInput - now;
+        const diff = birthday - now;
 
         if (diff <= 0){
-            countdownText.textContent = "Happy Birthday"
+            // countdownText.textContent = "Happy Birthday"
+            const countdownText = document.getElementById("countdownText");
             clearInterval(timer);
             return;
         }
@@ -69,7 +70,7 @@ document.getElementById("startCountdown").addEventListener("click", () => {
         const minutes = Math.floor((diff / (1000 * 60)) % 60);
         const seconds = Math.floor((diff / 1000) % 60);
 
-        countdownText.textContent = `${days}d ${hours}h ${minutes}m ${sceonds}s until your birthday! ${userName}`;
+        countdownText.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s until your birthday!`;
     }
     updateCountdown();
     const timer = setInterval(updateCountdown, 1000);
