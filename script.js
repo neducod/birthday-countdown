@@ -1,4 +1,5 @@
-/*let userName;
+/*
+let userName;
 
 document.getElementById("myButton").addEventListener("click", function(){
     const name = document.getElementById("myText").value.trim();
@@ -20,24 +21,20 @@ document.getElementById("myButton").addEventListener("click", function(){
 })
 
 */
-let userName;
 
-const myText = document.getElementById("myText");
-// const myButton = document.getElementById("myButton");
-const secondDiv = document.getElementById("secondDiv");
+
+
+const myText = document.getElementById("myText"); 
 const firstText = document.getElementById("firstText");
-const birthdayInput = document.getElementById("birthdayInput");
-const startCountdown = document.getElementById("startCountdown");
-const countdownSection = document.getElementById("countdownSection");
+const birthdayInput = document.getElementById("birthdayInput"); 
 const countdownText = document.getElementById("countdownText");
 
 
-
-document.getElementById("myButton").addEventListener("click", () => {
-    const userName = nameInput.value.trim();
+document.getElementById("myButton").addEventListener("click",() => {
+    const userName = myText.value.trim();
     if(userName){
-        greeting.textContent = `Hi ${userName}!`;
-        document.getElementById("first-div").style.display = "none";
+        firstText.textContent = `Hi ${userName}`;
         document.getElementById("secondDiv").style.display = "block";
+        document.getElementById("firstDiv").style.display = "none";
     }
 });
