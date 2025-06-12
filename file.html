@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Countdown | Josephine Jerome</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" media="screen and (min-width: 600px)" href="example1.css">
+
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          padding: 2rem;
+        }
+        #birthdaySection, #countdownSection {
+          display: none;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <!-- <link rel="stylesheet" media="screen and (min-width: 600px)" href="example1.css"> -->
 </head>
 <body>
+<!--  
+
+
     <div class="container">
         <h1>🎉 Birthday Countdown 🎉</h1>
-<!--  
+<
+
         <input type="datetime-local" id="birthdayInput">
         <button onclick="startCountdown()" class="btnn">Start Countdown</button>
-    -->
+    --
+
         <input id="birthdayInput" type="date"/>
         <button onclick="startCountdown()" class="btnn">Start Countdown</button>
 
@@ -22,6 +38,27 @@
 
         <button id="shareBtn" onclick="share()" class="btn">Share</button>
     </div>
+
+-->
+
+
+
+<div id="nameSection">
+    <input type="text" id="nameInput" placeholder="What's your name?" />
+    <button id="submitName">Submit</button>
+</div>
+
+  <!-- Greeting + Date Picker -->
+<div id="birthdaySection">
+    <p id="greeting"></p>
+    <input type="date" id="birthdayInput" />
+    <button id="startCountdown">Start Countdown</button>
+</div>
+
+  <!-- Countdown Timer -->
+<div id="countdownSection">
+    <h2 id="countdownText"></h2>
+</div>
 </body>
 <script src="./index.js"></script>
 </html>
