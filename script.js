@@ -61,6 +61,7 @@ document.getElementById("startCountdown").addEventListener("click", () => {
         if (diff <= 0){
             // countdownText.textContent = "Happy Birthday"
             const countdownText = document.getElementById("countdownText");
+            countdownText.textContent = "Happy Birthday"
             clearInterval(timer);
             return;
         }
