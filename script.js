@@ -102,7 +102,7 @@ document.getElementById("startCountdown").addEventListener("click", () => {
     updateCountdown();
     const timer = setInterval(updateCountdown, 1000);
 });
-
+//CODE FOR CONFETTI
 confetti({
     particleCount: 150,
     spread: 70,
@@ -114,9 +114,13 @@ document.getElementById("shareBtn").addEventListener("click", () => {
         navigator.share({
             title: "🎉 Happy Birthday!",
             text: "My birthday countdown just ended!",
-            url: window.location.href
+            url: "https://neducod.github.io/birthday-countdown/"
         });
     } else {
         alert("Sharing is not supported in this browser.");
     }
 });
+//CODE FOR TICKS
+const tick = new Audio("audio/ticks.mp3");
+tick.currentTime = 0;
+tick.play();
