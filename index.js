@@ -181,8 +181,8 @@ let countdownInterval;
       }).catch(err => console.error("Share failed:", err));
     }
 
-
 */
+
 
 
 
@@ -241,54 +241,54 @@ const nameInput = document.getElementById("nameInput");
 */
 
 
-const nameInput = document.getElementById("nameInput");
-    const birthdayInput = document.getElementById("birthdayInput");
-    const greeting = document.getElementById("greeting");
-    const countdownText = document.getElementById("countdownText");
+// const nameInput = document.getElementById("nameInput");
+//     const birthdayInput = document.getElementById("birthdayInput");
+//     const greeting = document.getElementById("greeting");
+//     const countdownText = document.getElementById("countdownText");
 
-    document.getElementById("submitName").addEventListener("click", () => {
-      const name = nameInput.value.trim();
-      if (name) {
-        greeting.textContent = `Hi ${name}! When exactly is your birthday? 🎉`;
-        document.getElementById("nameSection").style.display = "none";
-        document.getElementById("birthdaySection").style.display = "block";
-      }
-    });
+//     document.getElementById("submitName").addEventListener("click", () => {
+//       const name = nameInput.value.trim();
+//       if (name) {
+//         greeting.textContent = `Hi ${name}! When exactly is your birthday? 🎉`;
+//         document.getElementById("nameSection").style.display = "none";
+//         document.getElementById("birthdaySection").style.display = "block";
+//       }
+//     });
 
-    document.getElementById("startCountdown").addEventListener("click", () => {
-      const inputVal = birthdayInput.value;
-      if (inputVal === "") return;
+//     document.getElementById("startCountdown").addEventListener("click", () => {
+//       const inputVal = birthdayInput.value;
+//       if (inputVal === "") return;
 
-      const birthday = new Date(inputVal);
-      const now = new Date();
+//       const birthday = new Date(inputVal);
+//       const now = new Date();
 
-      // Adjust year if birthday has passed this year
-      if (birthday < now) {
-        birthday.setFullYear(now.getFullYear() + 1);
-      }
+//       // Adjust year if birthday has passed this year
+//       if (birthday < now) {
+//         birthday.setFullYear(now.getFullYear() + 1);
+//       }
 
-      document.getElementById("birthdaySection").style.display = "none";
-      document.getElementById("countdownSection").style.display = "block";
+//       document.getElementById("birthdaySection").style.display = "none";
+//       document.getElementById("countdownSection").style.display = "block";
 
-      function updateCountdown() {
-        const now = new Date();
-        const diff = birthday - now;
+//       function updateCountdown() {
+//         const now = new Date();
+//         const diff = birthday - now;
 
-        if (diff <= 0) {
-          countdownText.textContent = "🎉 Happy Birthday! 🎉";
-          clearInterval(timer);
-          return;
-        }
+//         if (diff <= 0) {
+//           countdownText.textContent = "🎉 Happy Birthday! 🎉";
+//           clearInterval(timer);
+//           return;
+//         }
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
+//         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+//         const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+//         const minutes = Math.floor((diff / (1000 * 60)) % 60);
+//         const seconds = Math.floor((diff / 1000) % 60);
 
-        countdownText.textContent =
-          `${days}d ${hours}h ${minutes}m ${seconds}s until your birthday! 🎂`;
-      }
+//         countdownText.textContent =
+//           `${days}d ${hours}h ${minutes}m ${seconds}s until your birthday! 🎂`;
+//       }
 
-      updateCountdown();
-      const timer = setInterval(updateCountdown, 1000);
-    });
+//       updateCountdown();
+//       const timer = setInterval(updateCountdown, 1000);
+//     });
