@@ -5,7 +5,7 @@
 body{
     place-items: center;
     margin-top: 100px;
-    background-color: rgb(244, 230, 196);
+    background-color: rgb(243, 224, 237); 
 }
 .container{
     display: flex;
@@ -25,6 +25,11 @@ body{
     background: #74ebd5;
     background: var(--background);
     z-index: 1;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: rgba(174, 207, 224, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.container:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 .container::before {
     background: linear-gradient(to bottom right, #f6d365 0%, #fda085 100%);
@@ -69,9 +74,15 @@ body{
   font-style: normal;
 }
 #firstText{
-    font-family: "Noto Sans JP", sans-serif;
+   /* font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 300;*/
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 23px;
+  color: rgb(88, 51, 88);
   font-style: normal;
 }
 .label-contanier{
@@ -84,38 +95,36 @@ body{
     flex-direction: column;
 }
 .labein{
-    width: 220px;
-    height: 20px;
+    margin: 5px;
+    width: 230px; 
+    height: 24px; 
+    border: none;
+    font-size: 13px;
+    border: 1px solid rgb(58, 39, 42);
+    color: rgb(68, 19, 28);
+    font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  outline: pink;
 }
 .labein:hover{
-    outline: pink;
-}
-.labein:focus{
-    outline: pink;
+    border-color: rgb(54, 57, 42);
 }
 #myButton{
-    height: 30px;
+    height: 33px;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: plum;
+    background-color: rgb(221, 160, 221);
+    border-radius: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-#wrapPer{
-    display: none;
-}
-#wrapPer button{
-    width: 160px;
-    height: 45px;
-    border: 2px;
-    border-radius: 10px;
-    background-color: pink;
-}
-#wrapPer button:hover{
-    background-color: palevioletred;
-}
-#wrapPer button a{
-    color: black;
-    text-decoration: none;
+#myButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(79, 18, 73, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: rgb(226, 169, 220); 
+    color: whitesmoke;
 }
 .btn{
     width: 160px;
@@ -143,6 +152,12 @@ body{
 .secondDiv{
     display: flex;
     flex-direction: row;
+}
+.when{
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    margin: 13px;
 }
 @media screen and (max-width: 480px) {
     body {

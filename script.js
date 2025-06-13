@@ -33,7 +33,7 @@ const countdownText = document.getElementById("countdownText");
 document.getElementById("myButton").addEventListener("click",() => {
     const userName = myText.value.trim();
     if(userName){
-        firstText.textContent = `Hi ${userName}`;
+        firstText.textContent = `Hi ${userName} 🌼✨`;
         document.getElementById("secondDiv").style.display = "block";
         document.getElementById("firstDiv").style.display = "none";
     }
@@ -61,7 +61,7 @@ document.getElementById("startCountdown").addEventListener("click", () => {
         if (diff <= 0){
             // countdownText.textContent = "Happy Birthday"
             const countdownText = document.getElementById("countdownText");
-            countdownText.textContent = "Happy Birthday"
+            countdownText.textContent = "Happy Birthday"  . 
             clearInterval(timer);
             return;
         }
