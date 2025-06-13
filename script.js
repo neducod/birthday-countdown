@@ -101,11 +101,22 @@ document.getElementById("startCountdown").addEventListener("click", () => {
     }
     updateCountdown();
     const timer = setInterval(updateCountdown, 1000);
-})
-// //For random images when the countdown finishes
-// const images = [
-//     "images/birthday.jpeg",
-//     "images/birthday2.jpeg"
-// ];
+});
 
-// const audio = new Audio("audio/audio.mp3");
+confetti({
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 }
+});
+
+document.getElementById("shareBtn").addEventListener("click", () => {
+    if (navigator.share) {
+        navigator.share({
+            title: "🎉 Happy Birthday!",
+            text: "My birthday countdown just ended!",
+            url: window.location.href
+        });
+    } else {
+        alert("Sharing is not supported in this browser.");
+    }
+});
