@@ -184,6 +184,8 @@ body{
     }
     .container{
         height: auto;
+        padding-bottom: 50px;
+        place-self: center;
     }
     .h1{
         font-size: 24px;

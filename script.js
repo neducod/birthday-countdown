@@ -58,12 +58,38 @@ document.getElementById("startCountdown").addEventListener("click", () => {
         const now = new Date();
         const diff = birthday - now;
 
+
+
+
+        //For random images when the countdown finishes
+        const images = [
+            "images/birthday.jpeg",
+            "images/birthday2.jpeg"
+        ];
+
+        const audio = new Audio("audio/audio.mp3");
+
         if (diff <= 0){
-            // countdownText.textContent = "Happy Birthday"
+
+
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            const birthdayImage = document.getElementById("birthdayImage");
+            birthdayImage.src = randomImage;
+            birthdayImage.style.display = "block"
+
             const countdownText = document.getElementById("countdownText");
-            countdownText.textContent = "Happy Birthday"  . 
+            countdownText.innerHTML = 'Happy Birthday <br> <img src="${randomImage}" style = "max-width: 80px; margin-top: 10px;" '
+            audio.play();
             clearInterval(timer);
             return;
+
+
+
+            // countdownText.textContent = "Happy Birthday"
+            // const countdownText = document.getElementById("countdownText");
+            // // countdownText.textContent = "Happy Birthday"
+            // clearInterval(timer);
+            // return;
         }
 
         const days = Math.floor(diff /(1000 * 60 * 60 * 24));
@@ -76,3 +102,10 @@ document.getElementById("startCountdown").addEventListener("click", () => {
     updateCountdown();
     const timer = setInterval(updateCountdown, 1000);
 })
+// //For random images when the countdown finishes
+// const images = [
+//     "images/birthday.jpeg",
+//     "images/birthday2.jpeg"
+// ];
+
+// const audio = new Audio("audio/audio.mp3");
