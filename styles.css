@@ -126,23 +126,6 @@ body{
     background-color: rgb(226, 169, 220); 
     color: whitesmoke;
 }
-.btn{
-    width: 160px;
-    height: 45px;
-    border: 2px;
-    border-radius: 10px;
-    background-color: pink;  
-}
-.btn:hover{
-    background-color: #f6d365;
-}
-.btnn{
-    width: 160px;
-    height: 25px;
-    border: 2px;
-    border-radius: 10px;
-    background-color: pink;  
-}
 #countdownSection{
     display: none;
 }
@@ -158,6 +141,42 @@ body{
     font-optical-sizing: auto;
     font-weight: 600;
     margin: 13px;
+}
+#birthdayInput{
+    height: 16px;
+    padding: 4px;
+    font-size: 16px;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 8px;
+    background-color: rgb(249, 249, 249);
+    color: rgb(51, 51, 51);
+    width: 220px;
+}
+#startCountdown{
+    width: 200px;
+    height: 33px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(221, 160, 221);
+    border-radius: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#startCountdown:hover{
+    background-color: rgb(226, 169, 220); 
+    color: whitesmoke;
+}
+#countdownText{
+    /* font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 20px; */
+
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300; 
+    font-size: 20px;
 }
 @media screen and (max-width: 480px) {
     body {
